@@ -6,8 +6,6 @@ require_relative '../lib/wardrobe'
 
 describe Wardrobe do
   before(:all) do
-    document_xml = REXML::Document.new('<?xml version="1.0" encoding="utf-8"?>')
-    document_xml.add_element('clothing')
     garment_array = [
       Garment.new('Шапка-ушанка', 'Головной убор', Range.new(-20, -5)),
       Garment.new('Кроссовки', 'Обувь', Range.new(0, 15)),
@@ -20,44 +18,7 @@ describe Wardrobe do
       Garment.new('Белая футболка', 'Футболка', Range.new(20, 40))
     ]
 
-    garment_array.each_with_index do |garment, index|
-      name = garment.name
-      type = garment.type
-      temperature = "(#{garment.temperature_range.begin}, +#{garment.temperature_range.end})"
-
-      garment_node = document_xml.root.add_element('garment')
-      garment_node.add_attribute('id', (index + 1).to_s)
-
-      name_node = garment_node.elements.add('name')
-      name_node.text = name
-
-      type_node = garment_node.elements.add('type')
-      type_node.text = type
-
-      temperature_node = garment_node.elements.add('temperature')
-      temperature_node.text = temperature
-    end
-
-    data_folder_path = File.join(Dir.pwd, 'spec', 'fixtures')
-    FileUtils.mkdir_p(data_folder_path)
-    FileUtils.touch(File.join(data_folder_path, 'clothing.xml'))
-    xml_file_path = File.absolute_path(File.join(data_folder_path, 'clothing.xml'))
-
-    file = File.new(File.join(data_folder_path, 'clothing.xml'), 'w:UTF-8')
-    formatter = REXML::Formatters::Pretty.new
-    formatter.compact = true
-    formatter.write(document_xml, file)
-    file.close
-
-    @repository = Repository.new(xml_file_path)
-    @wardrobe = Wardrobe.new(@repository.get_data)
-  end
-
-  after(:all) do
-    data_folder_path = File.join(Dir.pwd, 'spec', 'fixtures')
-    xml_file_path = File.absolute_path(File.join(data_folder_path, 'clothing.xml'))
-    FileUtils.rm(xml_file_path)
-    FileUtils.remove_dir(data_folder_path)
+    @wardrobe = Wardrobe.new(garment_array)
   end
 
   describe '#new' do
