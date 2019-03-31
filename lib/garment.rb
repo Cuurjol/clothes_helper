@@ -12,6 +12,6 @@ class Garment
   end
 
   def to_s
-    "#{@name} (#{@type}) [от #{@temperature_range.begin} до #{@temperature_range.end}]"
+    I18n.t('garment.information', name: @name, type: @type, begin: @temperature_range.begin, end: @temperature_range.end)
   end
 end

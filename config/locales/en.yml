@@ -1,0 +1,59 @@
+en:
+  city:
+    collection:
+      - 'New York, USA'
+      - 'Toronto, Canada'
+      - 'Berlin, Germany'
+      - 'Paris, France'
+      - 'Helsinki, Finland'
+      - 'Sydney, Australia'
+      - 'Tokyo, Japan'
+    result: '%{city} — local time %{local_time}, temperature %{temperature}°C'
+  main:
+    directory_error: 'Folder data does not exist in working directory %{working_directory}.'
+    file_error: 'There is no file %{file_path} in the data folder in the %{working_directory} working directory.'
+  program:
+    name: 'Program "Wardrobe".'
+    menu: 'Menu items:'
+    menu_items:
+      - '1: What to wear?'
+      - '2: Add a new garment to the wardrobe'
+      - '3: Delete a necessary garment from the wardrobe'
+      - '4. Quit the Program'
+    input_item: 'Enter menu item:'
+    item_alert_message: 'Invalid menu item. Re-enter menu item:'
+    exit_question: 'Do you want to exit the program?(1:yes/0:no)'
+    answers:
+      - 'yes'
+      - 'no'
+      - '1'
+      - '0'
+    exit_question_alert_message: 'Invalid input answer. Re-enter your answer:'
+    correct_answers:
+      - 'yes'
+      - '1'
+    weather_question: 'Weather for which city do you want to know?'
+    your_answer: 'Your answer:'
+    number_alert_message: 'Invalid input number. Re-enter the number of garment:'
+    no_clothes: 'There are no suitable clothes for weather with a temperature of %{temperature}. Sit at home and do not go out!'
+    clothes: 'Program offers today to wear:'
+    garment_properties: 'Garment has three properties: Name, Type and Range of Temperatures.'
+    input_garment_name: 'Enter Name:'
+    input_garment_type: 'Enter Type:'
+    input_initial_temperature: 'Enter the initial temperature value:'
+    input_final_temperature: 'Enter the final temperature value:'
+    alt_number_alert_message: 'Invalid input numbers.'
+    re_input_initial_temperature: 'Re-enter the initial temperature value:'
+    re_input_final_temperature: 'Re-enter the final temperature value:'
+    add_garment: 'New garment was added to the wardrobe: %{garment}'
+    clothes_list: 'List of clothes in the wardrobe:'
+    input_garment_number: 'Enter the number of garment which you want to delete:'
+    delete_garment: 'Garment was deleted from the wardrobe: %{garment}'
+    exit_message: 'You quit the program.'
+    update_process: 'File %{file_name} update in progress...'
+    update_file: 'File %{file_name} was successfully updated in the %{data_folder_path} folder'
+  garment:
+    information: '%{name} (%{type}) [from %{begin} till %{end}]'
+  languages:
+    en: "English"
+    ru: "Русский"

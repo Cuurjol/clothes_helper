@@ -1,0 +1,59 @@
+ru:
+  city:
+    collection:
+      - 'Нью-Йорк, США'
+      - 'Торонто, Канада'
+      - 'Берлин, Германия'
+      - 'Париж, Франция'
+      - 'Хельсинки, Финляндия'
+      - 'Сидней, Австралия'
+      - 'Токио, Япония'
+    result: '%{city} — местное время %{local_time}, температура %{temperature}°C'
+  main:
+    directory_error: 'Папка data не существует в рабочей директории %{working_directory}.'
+    file_error: 'В рабочей директории %{working_directory} в папке data отсутствует файл %{file_path}.'
+  program:
+    name: 'Программа "Гардероб".'
+    menu: 'Меню программы:'
+    menu_items:
+      - '1: Что надеть?'
+      - '2: Добавить новую вещь в гардероб'
+      - '3: Убрать нужную вещь из гардероба'
+      - '4. Выйти из программы'
+    input_item: 'Введите пункт меню программ:'
+    item_alert_message: 'Некорректный ввод меню. Повторите ввод:'
+    exit_question: 'Вы хотите выйти из программы?(1:да/0:нет)'
+    answers:
+      - 'да'
+      - 'нет'
+      - '1'
+      - '0'
+    exit_question_alert_message: 'Некорректный ввод ответа на вопрос. Повторите ввод:'
+    correct_answers:
+      - 'да'
+      - '1'
+    weather_question: 'Погоду для какого города вы хотите узнать?'
+    your_answer: 'Ваш вариант ответ:'
+    number_alert_message: 'Некорректный ввод числа. Повторите ввод:'
+    no_clothes: 'Нет подходящей одежды для погоды с температурой %{temperature}. Сидите дома и не выходите на улицу!'
+    clothes: 'Предлагаем сегодня надеть:'
+    garment_properties: 'У вещи есть три свойства: Название, Тип и Диапазон Температур.'
+    input_garment_name: 'Введите Название:'
+    input_garment_type: 'Введите Тип:'
+    input_initial_temperature: 'Введите начальное значение температуры:'
+    input_final_temperature: 'Введите конечное значение температуры:'
+    alt_number_alert_message: 'Некорректный ввод чисел.'
+    re_input_initial_temperature: 'Повторно введите начальное значение температуры:'
+    re_input_final_temperature: 'Повторно введите конечное значение температуры:'
+    add_garment: 'Новая вещь была добавлена в гардероб: %{garment}'
+    clothes_list: 'Список вещей в гардеробе:'
+    input_garment_number: 'Введите номер вещи, которую вы хотите удалить:'
+    delete_garment: 'Вещь была убрана из гардероба: %{garment}'
+    exit_message: 'Вы вышли из программы.'
+    update_process: 'Идёт процесс обновления %{file_name} файла...'
+    update_file: 'Файл %{file_name} успешно обновлён в директории %{data_folder_path}'
+  garment:
+    information: '%{name} (%{type}) [от %{begin} до %{end}]'
+  languages:
+    en: "English"
+    ru: "Русский"

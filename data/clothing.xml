@@ -1,46 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?> 
 <clothing>
-  <garment id="1">
+  <garment id='1'>
     <name>Шапка-ушанка</name>
     <type>Головной убор</type>
     <temperature>(-20, -5)</temperature>
   </garment>
-  <garment id="2">
+  <garment id='2'>
     <name>Кроссовки</name>
     <type>Обувь</type>
     <temperature>(0, +15)</temperature>
   </garment>
-  <garment id="3">
+  <garment id='3'>
     <name>Джинсы</name>
     <type>Штаны</type>
     <temperature>(-5, +15)</temperature>
   </garment>
-  <garment id="4">
+  <garment id='4'>
     <name>Пальто</name>
     <type>Верхняя одежда</type>
     <temperature>(-5, +10)</temperature>
   </garment>
-  <garment id="5">
+  <garment id='5'>
     <name>Шлепанцы</name>
     <type>Обувь</type>
     <temperature>(+20, +40)</temperature>
   </garment>
-  <garment id="6">
+  <garment id='6'>
     <name>Шорты-карго</name>
     <type>Шорты</type>
     <temperature>(+20, +30)</temperature>
   </garment>
-  <garment id="7">
+  <garment id='7'>
     <name>Плавки</name>
     <type>Шорты</type>
     <temperature>(+30, +40)</temperature>
   </garment>
-  <garment id="8">
+  <garment id='8'>
     <name>Панама</name>
     <type>Головной убор</type>
     <temperature>(+30, +40)</temperature>
   </garment>
-  <garment id="9">
+  <garment id='9'>
     <name>Белая футболка</name>
     <type>Футболка</type>
     <temperature>(+20, +40)</temperature>
