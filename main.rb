@@ -37,8 +37,6 @@ else
   I18n.locale = locales[code - 1]
 end
 
-# require_relative 'lib/city'
-
 xml_file_path = File.join(Dir.pwd, 'data', 'clothing.xml')
 
 unless Dir.exist?(File.join(Dir.pwd, 'data'))
