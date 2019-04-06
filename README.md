@@ -60,7 +60,7 @@ Then you need to commit the following steps:
 
 ## Demo
 
-You can watch a demo version of the game at the [link](https://asciinema.org/a/AVpXEPWPCPPYayw3E5UjUaF8Z).
+You can watch a demo version of the application at the [link](https://asciinema.org/a/AVpXEPWPCPPYayw3E5UjUaF8Z).
   
 ## Author
 
