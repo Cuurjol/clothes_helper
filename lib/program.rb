@@ -19,21 +19,21 @@ class Program
 
   def input_menu_item
     print("#{I18n.t('program.input_item')} ")
-    user_pick = gets.chomp
+    user_pick = STDIN.gets.chomp
     pattern = /^[0-9]+$/
     until pattern.match?(user_pick) && user_pick.to_i > 0 && user_pick.to_i <= 4
       print("#{I18n.t('program.item_alert_message')} ")
-      user_pick = gets.chomp
+      user_pick = STDIN.gets.chomp
     end
     user_pick.to_i
   end
 
   def ask_question
     print("\n#{I18n.t('program.exit_question')} ")
-    answer = gets.chomp.downcase
+    answer = STDIN.gets.chomp.downcase
     until I18n.t('program.answers').include?(answer)
       print("#{I18n.t('program.exit_question_alert_message')} ")
-      answer = gets.chomp.downcase
+      answer = STDIN.gets.chomp.downcase
     end
     exit_program if I18n.t('program.correct_answers').include?(answer)
   end
@@ -43,11 +43,11 @@ class Program
     puts(I18n.t('program.weather_question'))
     puts(City.show_cities_list)
     print("\n#{I18n.t('program.your_answer')} ")
-    city_user_pick = gets.chomp
+    city_user_pick = STDIN.gets.chomp
 
     until /^[0-9]+$/.match?(city_user_pick) &&  city_user_pick.to_i <= City.get_number_of_cities
       print("#{I18n.t('program.number_alert_message')} ")
-      city_user_pick = gets.chomp
+      city_user_pick = STDIN.gets.chomp
     end
 
     city_user_pick = city_user_pick.to_i
@@ -68,24 +68,24 @@ class Program
     cls
     puts(I18n.t('program.garment_properties'))
     print("\n#{I18n.t('program.input_garment_name')} ")
-    name = gets.chomp.capitalize
+    name = STDIN.gets.chomp.capitalize
 
     print("#{I18n.t('program.input_garment_type')} ")
-    type = gets.chomp.capitalize
+    type = STDIN.gets.chomp.capitalize
 
     print("#{I18n.t('program.input_initial_temperature')} ")
-    begin_number = gets.chomp
+    begin_number = STDIN.gets.chomp
 
     print("#{I18n.t('program.input_final_temperature')} ")
-    end_number = gets.chomp
+    end_number = STDIN.gets.chomp
 
     pattern = /^[0-9]+$|^-[0-9]+$/
     until pattern.match?(begin_number) && pattern.match?(end_number) && begin_number.to_i < end_number.to_i
       puts("\n#{I18n.t('program.alt_number_alert_message')}")
       print("#{I18n.t('program.re_input_initial_temperature')} ")
-      begin_number = gets.chomp
+      begin_number = STDIN.gets.chomp
       print("#{I18n.t('program.re_input_final_temperature')} ")
-      end_number = gets.chomp
+      end_number = STDIN.gets.chomp
     end
 
     temperature_range = Range.new(begin_number.to_i, end_number.to_i)
@@ -100,12 +100,12 @@ class Program
     puts("#{I18n.t('program.clothes_list')}\n\n")
     puts(@wardrobe.to_s)
     print("\n#{I18n.t('program.input_garment_number')} ")
-    garment_number = gets.chomp
+    garment_number = STDIN.gets.chomp
 
     pattern = /^[0-9]+$/
     until pattern.match?(garment_number) && garment_number.to_i > 0 && garment_number.to_i <= @wardrobe.clothing.size
       print("#{I18n.t('program.number_alert_message')} ")
-      garment_number = gets.chomp
+      garment_number = STDIN.gets.chomp
     end
 
     garment = @wardrobe.search(by: :object, value: @wardrobe.clothing[garment_number.to_i - 1])
